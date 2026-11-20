@@ -2,7 +2,14 @@
   "crons": [
     {
       "path": "/api/internal/process-reminders",
-      "schedule": "*/5 * * * *"
+      "schedule": "0 9 * * *"
     }
-  ]
+  ],
+  "services": {
+    "lifereminder": {
+      "root": ".",
+      "framework": "nextjs",
+      "buildCommand": "npm run build"
+    }
+  }
 }
