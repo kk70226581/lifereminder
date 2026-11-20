@@ -8,8 +8,16 @@
   "services": {
     "lifereminder": {
       "root": ".",
-      "framework": "nextjs",
-      "buildCommand": "npm run build"
+      "framework": "nextjs"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "type": "service",
+        "service": "lifereminder"
+      }
+    }
+  ]
 }
