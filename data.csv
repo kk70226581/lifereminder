@@ -1,0 +1,23 @@
+ticket_id,customer_name,room_hostel,phone_number,cloth_count,service_type,drop_datetime,promised_datetime,actual_pickup_datetime,amount_due,status
+TK-101,Aman Verma,H3-214,+917348112368,4,ironing,2026-11-18 09:15,2026-11-19 18:00,2026-11-21 08:20,40,collected
+TK-102,Rahul Tiwari,H1-108,+919876543210,7,wash_iron,2026-11-18 10:40,2026-11-20 12:00,uncollected,140,pending_pickup
+TK-103,Siddharth Sen,H2-302,+919811223344,2,ironing,2026-11-18 11:05,2026-11-19 17:00,2026-11-19 19:10,20,collected
+TK-104,Vivek Kumar,H4-419,+919712345678,5,ironing,2026-11-18 14:20,2026-11-19 20:00,uncollected,50,overdue_48h
+TK-105,Pooja Sharma,GH-112,+919650123456,3,wash_iron,2026-11-18 16:30,2026-11-20 18:00,2026-11-20 19:15,60,collected
+TK-106,Karthik R,H3-105,+919988776655,6,ironing,2026-11-18 17:45,2026-11-19 20:00,uncollected,60,overdue_48h
+TK-107,Devendra Pal,H1-412,+919123456780,1,dry_clean,2026-11-19 08:10,2026-11-21 10:00,uncollected,80,ready_for_pickup
+TK-108,Rohan Mehta,H2-211,+919345678901,8,wash_iron,2026-11-19 09:25,2026-11-21 12:00,uncollected,160,ready_for_pickup
+TK-109,Ankit Negi,H4-103,+919567890123,3,ironing,2026-11-19 10:50,2026-11-20 18:00,2026-11-21 08:45,30,collected
+TK-110,Abhishek Raj,H3-318,+919456789012,4,ironing,2026-11-19 11:30,2026-11-20 19:00,uncollected,40,overdue_24h
+TK-111,Sneha Roy,GH-204,+919234567891,2,ironing,2026-11-19 13:15,2026-11-20 17:00,2026-11-20 17:30,20,collected
+TK-112,Farhan Khan,H1-220,+919876501234,5,ironing,2026-11-19 15:40,2026-11-20 20:00,uncollected,50,overdue_24h
+TK-113,Gaurav Yadav,H2-115,+919765432109,6,wash_iron,2026-11-19 17:10,2026-11-21 18:00,uncollected,120,processing
+TK-114,Manish Seth,H4-205,+919654321098,3,ironing,2026-11-20 08:20,2026-11-21 12:00,uncollected,30,ready_for_pickup
+TK-115,Aditya Joshi,H3-401,+919543210987,4,ironing,2026-11-20 09:45,2026-11-21 17:00,uncollected,40,processing
+TK-116,Deepak Soni,H1-309,+919432109876,2,ironing,2026-11-20 11:15,2026-11-21 18:00,uncollected,20,processing
+TK-117,Simran Kaur,GH-308,+919321098765,5,wash_iron,2026-11-20 12:30,2026-11-22 14:00,uncollected,100,processing
+TK-118,Nitin Rawat,H2-416,+919210987654,1,dry_clean,2026-11-20 14:00,2026-11-22 18:00,uncollected,90,processing
+TK-119,Shubham Gill,H4-310,+919109876543,7,ironing,2026-11-20 15:20,2026-11-21 19:00,uncollected,70,processing
+TK-120,Pradeep Pal,H3-222,+919098765432,3,ironing,2026-11-20 16:50,2026-11-21 20:00,uncollected,30,processing
+TK-121,Mayank Agarwal,H1-119,+918987654321,4,wash_iron,2026-11-21 07:40,2026-11-22 18:00,uncollected,80,processing
+TK-122,Rohit Saxena,H2-104,+918876543210,2,ironing,2026-11-21 08:15,2026-11-21 20:00,uncollected,20,processing
