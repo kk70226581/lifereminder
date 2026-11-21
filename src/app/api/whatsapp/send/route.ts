@@ -52,7 +52,7 @@ export async function POST(req: Request) {
         _id: testReminderId,
         offsetLabel: "Instant Send",
       },
-      forceLive: Boolean(forceLive),
+      forceLive: typeof forceLive === "boolean" ? forceLive : undefined,
     });
 
     // Save into Notification Log

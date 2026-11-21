@@ -66,7 +66,7 @@ export async function dispatchWhatsAppNotification(
   params: SendMessageParams
 ): Promise<DispatchResult> {
   const envMode = (process.env.WHATSAPP_MODE || "simulation").toLowerCase();
-  const isLive = params.forceLive || envMode === "live";
+  const isLive = params.forceLive !== undefined ? params.forceLive : envMode === "live";
 
   const userName = params.user.name || "Valued User";
   const messageContent = formatReminderMessage(
