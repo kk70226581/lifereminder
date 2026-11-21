@@ -3,8 +3,8 @@ import { NotificationStatus, ReminderChannel } from "@/types";
 
 export interface INotificationLogDocument extends Document {
   userId: mongoose.Types.ObjectId;
-  eventId: mongoose.Types.ObjectId;
-  reminderId: mongoose.Types.ObjectId;
+  eventId?: mongoose.Types.ObjectId;
+  reminderId?: mongoose.Types.ObjectId;
   channel: ReminderChannel;
   messageContent: string;
   providerMessageId?: string;
@@ -19,8 +19,8 @@ export interface INotificationLogDocument extends Document {
 const NotificationLogSchema = new Schema<INotificationLogDocument>(
   {
     userId: { type: Schema.Types.ObjectId, ref: "User", required: true, index: true },
-    eventId: { type: Schema.Types.ObjectId, ref: "Event", required: true },
-    reminderId: { type: Schema.Types.ObjectId, ref: "Reminder", required: true },
+    eventId: { type: Schema.Types.ObjectId, ref: "Event", required: false },
+    reminderId: { type: Schema.Types.ObjectId, ref: "Reminder", required: false },
     channel: { type: String, enum: ["whatsapp", "browser"], default: "whatsapp" },
     messageContent: { type: String, required: true },
     providerMessageId: { type: String },

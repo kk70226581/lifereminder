@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import mongoose from "mongoose";
 import { getCurrentUser } from "@/lib/auth";
 import { DataService } from "@/services/dataService";
 import { dispatchWhatsAppNotification } from "@/lib/whatsapp/dispatcher";
@@ -15,8 +16,11 @@ export async function POST() {
       return NextResponse.json({ success: false, error: "User not found." }, { status: 404 });
     }
 
+    const testEventId = new mongoose.Types.ObjectId().toString();
+    const testReminderId = new mongoose.Types.ObjectId().toString();
+
     const testEvent = {
-      _id: "test_event_id",
+      _id: testEventId,
       title: "LifeReminder Setup Verification Test",
       category: "Personal",
       eventDate: new Date().toISOString().split("T")[0],
@@ -34,7 +38,7 @@ export async function POST() {
       },
       event: testEvent,
       reminder: {
-        _id: "test_reminder_id",
+        _id: testReminderId,
         offsetLabel: "Test Ping",
       },
     });
@@ -42,8 +46,8 @@ export async function POST() {
     // Save to audit log
     const log = await DataService.addNotificationLog({
       userId: user._id.toString(),
-      eventId: testEvent._id,
-      reminderId: "test_reminder_id",
+      eventId: testEventId,
+      reminderId: testReminderId,
       channel: "whatsapp",
       messageContent: result.messageContent,
       providerMessageId: result.providerMessageId,

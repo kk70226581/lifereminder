@@ -569,7 +569,7 @@ export const DataService = {
     return memoryDb.notificationLogs
       .filter((n) => n.userId.toString() === userId.toString())
       .map((n) => {
-        const ev = memoryDb.events.find((e) => e._id.toString() === n.eventId.toString());
+        const ev = n.eventId ? memoryDb.events.find((e) => e._id.toString() === n.eventId!.toString()) : null;
         return {
           ...n,
           eventId: ev ? { _id: ev._id, title: ev.title, category: ev.category } : null,
@@ -580,8 +580,8 @@ export const DataService = {
 
   async addNotificationLog(logData: {
     userId: string;
-    eventId: string;
-    reminderId: string;
+    eventId?: string;
+    reminderId?: string;
     channel: "whatsapp" | "browser";
     messageContent: string;
     providerMessageId?: string;
@@ -590,11 +590,14 @@ export const DataService = {
   }) {
     const live = await isMongoLive();
     if (live) {
+      const isEventIdValid = logData.eventId && mongoose.Types.ObjectId.isValid(logData.eventId);
+      const isReminderIdValid = logData.reminderId && mongoose.Types.ObjectId.isValid(logData.reminderId);
+
       return NotificationLog.create({
         ...logData,
         userId: new mongoose.Types.ObjectId(logData.userId),
-        eventId: new mongoose.Types.ObjectId(logData.eventId),
-        reminderId: new mongoose.Types.ObjectId(logData.reminderId),
+        eventId: isEventIdValid ? new mongoose.Types.ObjectId(logData.eventId) : undefined,
+        reminderId: isReminderIdValid ? new mongoose.Types.ObjectId(logData.reminderId) : undefined,
         sentAt: new Date(),
         deliveredAt: new Date(),
       });

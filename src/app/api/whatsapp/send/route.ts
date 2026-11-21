@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import mongoose from "mongoose";
 import { getCurrentUser } from "@/lib/auth";
 import { DataService } from "@/services/dataService";
 import { dispatchWhatsAppNotification } from "@/lib/whatsapp/dispatcher";
@@ -26,8 +27,11 @@ export async function POST(req: Request) {
       );
     }
 
+    const testEventId = new mongoose.Types.ObjectId().toString();
+    const testReminderId = new mongoose.Types.ObjectId().toString();
+
     const testEvent = {
-      _id: "instant_send_event",
+      _id: testEventId,
       title: "Direct WhatsApp Reminder",
       category: "Personal",
       eventDate: new Date().toISOString().split("T")[0],
@@ -45,7 +49,7 @@ export async function POST(req: Request) {
       },
       event: testEvent,
       reminder: {
-        _id: `instant_rem_${Date.now()}`,
+        _id: testReminderId,
         offsetLabel: "Instant Send",
       },
       forceLive: Boolean(forceLive),
@@ -54,8 +58,8 @@ export async function POST(req: Request) {
     // Save into Notification Log
     await DataService.addNotificationLog({
       userId: user._id.toString(),
-      eventId: testEvent._id,
-      reminderId: `instant_rem_${Date.now()}`,
+      eventId: testEventId,
+      reminderId: testReminderId,
       channel: "whatsapp",
       messageContent: result.messageContent,
       providerMessageId: result.providerMessageId,

@@ -81,8 +81,8 @@ export interface IReminder {
 export interface INotificationLog {
   _id: string;
   userId: string;
-  eventId: string;
-  reminderId: string;
+  eventId?: string;
+  reminderId?: string;
   channel: ReminderChannel;
   messageContent: string;
   providerMessageId?: string;
