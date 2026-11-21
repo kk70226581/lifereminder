@@ -19,3 +19,9 @@ AI wasted almost 45 minutes trying to over-engineer solutions that made no sense
 1. It kept hallucinating complex enterprise authentication systems, role-based access control, and customer-facing mobile apps with QR code check-ins.
 2. When asked for sample data, it consistently generated clean, round numbers (e.g., 5 shirts, ₹50, 10:00 AM sharp) with zero missing entries or irregularities. I had to scrap all of it and manually record the real, messy entries from Mahender’s actual paper diary.
 3. It initially generated rigid Mongoose schemas that crashed with `ObjectId hex string` errors whenever direct test dispatches were run outside pre-seeded database entities.
+
+---
+
+### Screen Recording Demo (3 Mins)
+The 3-minute video recording of the working tool and automated dispatch is available here:  
+👉 **[Google Drive Video Demo](https://drive.google.com/file/d/1QzgmrEkB1mdwkri5r50Rge-Js5WfQhKw/view?usp=drive_link)**

@@ -6,6 +6,7 @@
 > **Observation Date:** Saturday, November 21, 2026 (08:15 AM – 09:15 AM)  
 > **Live Web Application:** [https://lifereminder-puce.vercel.app](https://lifereminder-puce.vercel.app)  
 > **GitHub Repository:** [https://github.com/kk70226581/lifereminder](https://github.com/kk70226581/lifereminder)  
+> **Screen Recording Demo (3 Mins):** [https://drive.google.com/file/d/1QzgmrEkB1mdwkri5r50Rge-Js5WfQhKw/view?usp=drive_link](https://drive.google.com/file/d/1QzgmrEkB1mdwkri5r50Rge-Js5WfQhKw/view?usp=drive_link)  
 
 ---
 
@@ -104,4 +105,5 @@ SUMMARY METRICS:
 - **Data:** [`data.csv`](./data.csv) — 22 real transcribed ledger rows.
 - **Step 3 Code:** [`dispatch_laundry_reminders.py`](./dispatch_laundry_reminders.py) — Working CLI dispatcher.
 - **Step 4:** [`reflection.md`](./reflection.md) — Honest engineering reflection.
+- **Video Demo (3 Mins):** [Google Drive Screen Recording](https://drive.google.com/file/d/1QzgmrEkB1mdwkri5r50Rge-Js5WfQhKw/view?usp=drive_link)
 - **AI Logs:** [`ai-chats/`](./ai-chats/) — Exported AI prompt transcripts.
