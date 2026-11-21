@@ -1,0 +1,45 @@
+================================================================================
+FIREAI SDE-1 1-DAY TAKE-HOME ASSIGNMENT SUBMISSION
+================================================================================
+Candidate Name     : Karan Kumar
+Enrollment Number  : IIT2023129
+Institute          : Indian Institute of Information Technology, Allahabad (IIITA)
+Email              : iit2023129@iiita.ac.in
+Submission Date    : November 21, 2026
+
+--------------------------------------------------------------------------------
+PRIMARY SUBMISSION LINKS
+--------------------------------------------------------------------------------
+1. Public GitHub Repository:
+   https://github.com/kk70226581/lifereminder
+
+2. Live Web Application (Vercel Production):
+   https://lifereminder-puce.vercel.app
+
+3. 3-Minute Video Screen Recording (Google Drive):
+   https://drive.google.com/file/d/1QzgmrEkB1mdwkri5r50Rge-Js5WfQhKw/view?usp=drive_link
+
+--------------------------------------------------------------------------------
+PROJECT & FIELDWORK SUMMARY
+--------------------------------------------------------------------------------
+• Real Person Helped   : Mahender Kumar (Sole Proprietor & Pressing Operator)
+• Physical Location    : Mahender Dry Cleaners & Press, Gate No. 2, College Hostel Road
+• Core Bottleneck      : 45%+ of students delay collecting pressed clothes by 2-5 days,
+                         using his tiny 8x10 ft shop as free wardrobe storage. This blocks
+                         ₹400–₹1,200 of working capital and causes morning interview chaos.
+• Data Collected       : 22 authentic ledger rows (data.csv) transcribed from his diary.
+• Solution Built       : CLI reminder engine (dispatch_laundry_reminders.py) + full-stack
+                         Next.js web application with live Meta WhatsApp Cloud API integration.
+
+--------------------------------------------------------------------------------
+INCLUDED ARTIFACTS IN REPOSITORY
+--------------------------------------------------------------------------------
+1. research.md                      : Problem in 5 lines, 2 failed solutions, 2 read sources
+2. fieldwork.md                     : On-site observations, 3 quotes, surprise finding
+3. data.csv                         : 22 real ledger rows (drop time, pickup time, amount due)
+4. dispatch_laundry_reminders.py    : Python tool that reads data.csv and triggers alerts
+5. README.md                        : Execution instructions, real terminal output, limits
+6. reflection.md                    : Honest half-page engineering reflection
+7. ai-chats/                        : Exported AI prompt transcripts and debugging logs
+8. photos/                          : Fieldwork photo references
+================================================================================
