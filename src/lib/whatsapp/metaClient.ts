@@ -86,10 +86,17 @@ export class MetaWhatsAppClient {
       const data = await response.json();
 
       if (!response.ok) {
-        const errorMsg =
+        let errorMsg =
           data.error?.message ||
           data.error?.error_user_msg ||
           `Meta API responded with HTTP status ${response.status}`;
+
+        if (data.error?.code === 190) {
+          errorMsg = `Meta Access Token Expired (Code 190): Your 24-hour temporary token expired. Go to developers.facebook.com → WhatsApp → API Setup, click "Generate access token" to copy a fresh token, or switch to Simulation Mode.`;
+        } else if (data.error?.code === 131030) {
+          errorMsg = `(#131030) Recipient phone number not in allowed list. Add your number in Meta Developers Console under "Manage phone number list", or use Simulation Mode.`;
+        }
+
         return {
           success: false,
           status: "Failed",
